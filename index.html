@@ -28,6 +28,32 @@
   <footer>
     <p>© 2026 My Name</p>
   </footer>
+  <section>
+  <h2>Search</h2>
+
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Type something..."
+  />
+
+  <button onclick="handleSearch()">Search</button>
+
+  <p id="result"></p>
+</section>
+
+<script>
+  function handleSearch() {
+    const value = document.getElementById("searchInput").value;
+
+    if (value.trim() === "") {
+      document.getElementById("result").innerText = "Please enter something.";
+    } else {
+      document.getElementById("result").innerText =
+        "You searched for: " + value;
+    }
+  }
+</script>
 
   <script src="script.js"></script>
 </body>
